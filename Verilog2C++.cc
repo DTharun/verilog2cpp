@@ -126,7 +126,7 @@ namespace moe
     
     ostr << name << "() { return ";
     //		  hhstr.form("n%08X",i->second);
-    ostr << 'n' << (uintptr_t)net;
+    ostr << "n0x" << std::hex << (uintptr_t)net;
     ostr << "; }";
   }
 
@@ -1716,7 +1716,7 @@ namespace moe
       if( debug() )
 	std::cerr << "create a header file\n";
 
-      hhstr << setw(indent) << "" << "#include <EmVer.hh>" << endl;
+      hhstr << setw(indent) << "" << "#include \"EmVer.hh\"" << endl;
       
       hhstr << setw(indent) << "" << "namespace moe" << endl;
       hhstr << setw(indent) << "" << '{' << endl;
