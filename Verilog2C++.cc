@@ -62,7 +62,7 @@ namespace moe
       }
 
     //ostr << 'n' << (uint)net;
-    ostr << 'n' << net;
+    ostr << 'n' << (uintptr_t)net;
     if( net->isArray() )
       ostr << '[' << net->depth() << ']';
 
@@ -126,7 +126,7 @@ namespace moe
     
     ostr << name << "() { return ";
     //		  hhstr.form("n%08X",i->second);
-    ostr << "n0x" << std::hex << (uintptr_t)net;
+    ostr << "n" << (uintptr_t)net;
     ostr << "; }";
   }
 
