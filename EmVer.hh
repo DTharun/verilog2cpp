@@ -71,12 +71,12 @@ namespace moe
       return ostr;
     }
   };
-  
+   /*** 
   template <uint32_t T,uint32_t A,uint32_t B>
   UIntN<T> operator +(const UIntN<A>& a,const UIntN<B>& b)
   {
     uint32_t tv[(T+31)/32];
-    uint64_t t=0;
+    uint64_t t=0,tw=0;
     int i;
     for( i=0;i<(tw+31)/32;i++ )
       tv[i] =t =
@@ -89,7 +89,7 @@ namespace moe
   }
 
 
-  /***
+
   friend UIntN operator -(const UIntN& a,const UIntN& b)
     {
       UIntN r;
