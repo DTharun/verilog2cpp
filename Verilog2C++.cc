@@ -1716,13 +1716,15 @@ namespace moe
       if( debug() )
 	std::cerr << "create a header file\n";
 
-      hhstr << setw(indent) << "" << "#include \"EmVer.hh\"" << endl;
+      //hhstr << setw(indent) << "" << "#include \"EmVer.hh\"" << endl;
+      hhstr << setw(indent) << "" << "#include \"stdint.h\"" << endl;
       
       hhstr << setw(indent) << "" << "namespace moe" << endl;
       hhstr << setw(indent) << "" << '{' << endl;
       indent+=2;
       
-      hhstr << setw(indent) << "" << "class " << findName( top_ ) << ": public EmVer" << endl;
+      //hhstr << setw(indent) << "" << "class " << findName( top_ ) << ": public EmVer" << endl;
+      hhstr << setw(indent) << "" << "class " << findName( top_ ) << endl;
       hhstr << setw(indent) << "" << "{" << endl;indent+=2;
       
       ////////////////////////////////////
